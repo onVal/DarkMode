@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
-import os, json, requests
+import os, subprocess
+import json, requests
 import darkdetect, todoist
 
 def toggleTodoistTheme():
@@ -34,6 +35,10 @@ def toggleTodoistTheme():
 
     api.commit()
 
+def toggleSystemTheme():
+    cmd = "osascript -e 'tell app \"System Events\" to tell appearance preferences to set dark mode to not dark mode'"
+    os.system(cmd)
+
 #toggles system dark mode
 toggleTodoistTheme()
-os.system("./toggleDarkMode.app/Contents/MacOS/Application\ Stub")
+toggleSystemTheme()

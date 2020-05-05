@@ -39,6 +39,15 @@ def toggleSystemTheme():
     cmd = "osascript -e 'tell app \"System Events\" to tell appearance preferences to set dark mode to not dark mode'"
     os.system(cmd)
 
+def toggleHyperTheme():
+    setLightCmd = "sed -i '' -e '/hyperterm-summon/ s:^://:g' -e '/hyper-solarized-light/ s:^//::g' $(echo $HOME)/.hyper.js"
+    setDarkCmd = "sed -i '' -e '/hyper-solarized-light/ s:^://:g' -e '/hyperterm-summon/ s:^//::g' $(echo $HOME)/.hyper.js"
+
+    os.system(setLightCmd if darkdetect.isDark() else setDarkCmd)
+        
+
+
 #toggles system dark mode
 toggleTodoistTheme()
+toggleHyperTheme()
 toggleSystemTheme()

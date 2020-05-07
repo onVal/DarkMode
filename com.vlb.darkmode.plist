@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
     <key>Label</key>
-    <string>com.vlb.darkMode</string>
+    <string>com.vlb.darkmode</string>
     <key>ProgramArguments</key>
     <array>
 		<string>/usr/local/bin/python3</string>
-		<string>/usr/local/lib/darkmode.py</string>
+		<string>/usr/local/bin/darkmode/darkmode.py</string>
     </array>
     <key>StartCalendarInterval</key>
         <array>
@@ -19,11 +19,10 @@
             </dict>
             <dict>
                 <key>Hour</key>
-                <integer>14</integer>
+                <integer>15</integer>
                 <key>Minute</key>
-                <integer>0</integer>
+                <integer>30</integer>
             </dict>
         </array>
-     
 </dict>
 </plist>

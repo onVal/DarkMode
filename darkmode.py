@@ -6,7 +6,7 @@ import darkdetect, todoist
 
 def toggleTodoistTheme():
 
-    with open("todoistCredentials.json", 'r') as f:
+    with open("/usr/local/bin/darkmode/todoistCredentials.json", 'r') as f:
         payload = json.load(f)["payload"]
 
     r = requests.post("https://todoist.com/oauth/access_token", data=payload)
